@@ -1,0 +1,41 @@
+---
+################
+system:
+  ################
+  structure1:
+    name: "ethane"
+    tlc: "UNL"
+    vacuum:
+      dirname: "vacuum"
+      psf_file_name: "step3_charmm2omm"
+      crd_file_name: "step3_charmm2omm"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_vacuum"
+    waterbox:
+      dirname: "waterbox"
+      psf_file_name: "step3_charmm2omm"
+      crd_file_name: "step3_charmm2omm"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_waterbox"
+################
+simulation:
+  ################
+  parameters:
+    nstep: 10000000
+    nstdcd: 2000
+    nstout: 1000
+    cons: None
+    dt: 0.001
+    switch: "vswitch"
+    mini_nstep: 1000
+
+  workload-manager: "slurm"
+  GPU: True
+
+  free-energy-type: "asfe"
+################
+solvation:
+  ################
+  steps_for_equilibration: 1000

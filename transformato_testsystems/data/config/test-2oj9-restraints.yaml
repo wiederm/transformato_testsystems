@@ -5,16 +5,28 @@ simulation:
   manualrestraints:
     restraint1:
       k: 3
-      group1: resname BMI
+      group1: resname BMI and name C17
       group2: protein and name CA
       shape: harmonic
-
     restraint2:
       k: 10
-      group1: resname BMI and type C
+      group1: resname BMI and name C21
       group2: protein and name CA
       shape: flatbottom
-      wellsize: 0.12
+
+    restraint3:
+      k: 4
+      group1: resname BMI and name C4
+      group2: protein and name CA
+      shape: flatbottom-oneside-sharp
+      
+    restraint4:
+      k: 9
+      group1: resname BMI and name C7
+      group2: protein and name CA
+      shape: flatbottom-twoside
+      wellsize: 1.5
+      r0: 9
 
 system:
   structure:

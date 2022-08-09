@@ -431,18 +431,18 @@ def get_output_files_2oj9_tautomer_pair():
 
 def get_output_files_acetylaceton_tautomer_pair():
     output_files_enol = [
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst1/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst2/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst3/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst1/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst2/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-enol/intst3/",
     ]
     output_files_keto = [
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst1/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst2/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst3/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst4/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst5/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst6/",
-        "data/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst7/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst1/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst2/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst3/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst4/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst5/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst6/",
+        f"{get_testsystems_dir()}/acetylacetone-keto-acetylacetone-enol-rsfe/acetylacetone-keto/intst7/",
     ]
 
     return output_files_enol, output_files_keto
@@ -450,24 +450,24 @@ def get_output_files_acetylaceton_tautomer_pair():
 
 def get_output_files_toluene_methane_pair():
     output_files_methane = [
-        "data/toluene-methane-rsfe/methane/intst1/",
-        "data/toluene-methane-rsfe/methane/intst2/",
-        "data/toluene-methane-rsfe/methane/intst3/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/methane/intst1/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/methane/intst2/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/methane/intst3/",
     ]
     output_files_toluene = [
-        "data/toluene-methane-rsfe/toluene/intst1/",
-        "data/toluene-methane-rsfe/toluene/intst2/",
-        "data/toluene-methane-rsfe/toluene/intst3/",
-        "data/toluene-methane-rsfe/toluene/intst4/",
-        "data/toluene-methane-rsfe/toluene/intst5/",
-        "data/toluene-methane-rsfe/toluene/intst6/",
-        "data/toluene-methane-rsfe/toluene/intst7/",
-        "data/toluene-methane-rsfe/toluene/intst8/",
-        "data/toluene-methane-rsfe/toluene/intst9/",
-        "data/toluene-methane-rsfe/toluene/intst10/",
-        "data/toluene-methane-rsfe/toluene/intst11/",
-        "data/toluene-methane-rsfe/toluene/intst12/",
-        "data/toluene-methane-rsfe/toluene/intst13/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst1/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst2/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst3/",        
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst4/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst5/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst6/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst7/",        
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst8/",           
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst9/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst10/",
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst11",        
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst12/",   
+        f"{get_testsystems_dir()}/toluene-methane-rsfe/toluene/intst13/",
     ]
 
     return output_files_methane, output_files_toluene

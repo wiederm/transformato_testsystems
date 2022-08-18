@@ -24,16 +24,16 @@ system:
 simulation:
   ################
   parameters:
-    nstep: 10000000
-    nstdcd: 1000
+    nstep: 4000
+    nstdcd: 100
     nstout: 1000
-    cons: None
-    dt: 0.001
+    cons: HBonds
+    dt: 0.002
     switch: "vswitch"
     mini_nstep: 1000
 
   workload-manager: "slurm"
-  GPU: True
+  GPU: False
 
   free-energy-type: "asfe"
 ################

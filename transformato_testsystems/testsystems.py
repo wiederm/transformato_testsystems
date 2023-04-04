@@ -65,8 +65,6 @@ def mutate_7_CPI_to_2_CPI_cc(configuration: dict):  # will be tested later on
     s1_to_s2 = ProposeMutationRoute(s1, s2)
     s1_to_s2.completeRingsOnly = True
     s1_to_s2.propose_common_core()
-    s1_to_s2.remove_idx_from_common_core_of_mol1([14])
-    s1_to_s2.remove_idx_from_common_core_of_mol2([6])
     s1_to_s2.finish_common_core()
 
     mutation_list = s1_to_s2.generate_mutations_to_common_core_for_mol2()
@@ -79,7 +77,6 @@ def mutate_7_CPI_to_2_CPI_cc(configuration: dict):  # will be tested later on
         configuration=configuration,
         i=i,
         mutation_list=mutation_list,
-        list_of_heavy_atoms_to_be_mutated=[13, (11, 8), 0, (2, 10), (4, 7)],
     )
     return i.output_files
 
@@ -121,8 +118,6 @@ def mutate_2_CPI_to_7_CPI_cc(configuration: dict):  # will be tested later on
     s1_to_s2 = ProposeMutationRoute(s1, s2)
     s1_to_s2.completeRingsOnly = True
     s1_to_s2.propose_common_core()
-    s1_to_s2.remove_idx_from_common_core_of_mol1([14])
-    s1_to_s2.remove_idx_from_common_core_of_mol2([6])
     s1_to_s2.finish_common_core()
 
     mutation_list = s1_to_s2.generate_mutations_to_common_core_for_mol1()
@@ -135,7 +130,6 @@ def mutate_2_CPI_to_7_CPI_cc(configuration: dict):  # will be tested later on
         configuration=configuration,
         i=i,
         mutation_list=mutation_list,
-        list_of_heavy_atoms_to_be_mutated=[(2, 4), (0, 6), 11, 8, (12, 9)],
     )
 
     return i.output_files
@@ -203,9 +197,7 @@ def mutate_neopentane_to_methane_cc(configuration: dict):
 
     s1_to_s2 = ProposeMutationRoute(s1, s2)
     s1_to_s2.propose_common_core()
-    s1_to_s2.finish_common_core(
-        connected_dummy_regions_cc1=[{0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}]
-    )
+    s1_to_s2.finish_common_core()
 
     mutation_list = s1_to_s2.generate_mutations_to_common_core_for_mol1()
     i = IntermediateStateFactory(
@@ -217,8 +209,7 @@ def mutate_neopentane_to_methane_cc(configuration: dict):
     perform_mutations(
         configuration=configuration,
         i=i,
-        mutation_list=mutation_list,
-        list_of_heavy_atoms_to_be_mutated=[13, 9, 5],
+        mutation_list=mutation_list
     )
 
     return i.output_files
@@ -259,13 +250,11 @@ def mutate_acetylaceton_methyl_common_core(configuration: dict):
     s1_to_s2.matchValences = True
     s1_to_s2.bondCompare = rdFMCS.BondCompare.CompareOrderExact
     s1_to_s2.propose_common_core()
-    s1_to_s2.remove_idx_from_common_core_of_mol1([2, 10])
-    s1_to_s2.remove_idx_from_common_core_of_mol2([2, 10])
+    # s1_to_s2.remove_idx_from_common_core_of_mol1([2, 10])
+    # s1_to_s2.remove_idx_from_common_core_of_mol2([2, 10])
 
     # manually set the dummy region
-    s1_to_s2.finish_common_core(
-        connected_dummy_regions_cc1=[{11, 2, 10, 3, 6, 4, 13, 14, 12}]
-    )
+    s1_to_s2.finish_common_core()
 
     ###############################
     ########### KETO ##############
@@ -284,7 +273,6 @@ def mutate_acetylaceton_methyl_common_core(configuration: dict):
         configuration=configuration,
         i=i,
         mutation_list=mutation_list,
-        list_of_heavy_atoms_to_be_mutated=[4, 6, 3],
     )
 
     ###############################
@@ -302,7 +290,6 @@ def mutate_acetylaceton_methyl_common_core(configuration: dict):
         configuration=configuration,
         i=i,
         mutation_list=mutation_list,
-        list_of_heavy_atoms_to_be_mutated=[0, 5, 1],
     )
 
 

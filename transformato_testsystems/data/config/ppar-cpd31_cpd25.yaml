@@ -1,0 +1,56 @@
+---
+################
+system:
+  ################
+  structure1:
+    name: "ppar-cpd31"
+    tlc: "dy6"
+    waterbox:
+      dirname: "waterbox"
+      psf_file_name: "step3_input"
+      crd_file_name: "step3_input"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_waterbox"
+    complex:
+      dirname: "complex"
+      psf_file_name: "step3_input"
+      crd_file_name: "step3_input"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_complex"
+
+
+  structure2:
+    name: "ppar-cpd25"
+    tlc: "dy6"
+    waterbox:
+      dirname: "waterbox"
+      psf_file_name: "step3_input"
+      crd_file_name: "step3_input"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_waterbox"
+    complex:
+      dirname: "complex"
+      psf_file_name: "step3_input"
+      crd_file_name: "step3_input"
+      rst_file_name: "step4_equilibration"
+      simulation_parameter: "step5_production.inp"
+      intermediate-filename: "lig_in_complex"
+
+
+################
+simulation:
+  ################
+  parameters:
+    nstep: 1250000
+    nstdcd: 1000
+    nstout: 2000
+    cons: HBonds
+    dt: 0.004
+    mini_nstep: 500
+
+  workload-manager : "slurm"
+  GPU: True
+  free-energy-type: "rbfe"
